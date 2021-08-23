@@ -12,10 +12,13 @@ const reducer =(state,action) => {
                 basket: [...state.basket,action.item],
             };
         case 'REMOVE_FORM_BASKET':
-            const rIndex=state.basket.findIndex(({id}) => id===action.id);      
+            const rIndex=state.basket.findIndex(({id}) => id===action.id);  
+            var newb=state.basket;
+            newb.splice(rIndex,1);
+            
             return {
                 ...state,
-                basket: state.basket.filter((item,index) => index!==rIndex)
+                basket: [...newb]
             };
         case 'SET_USER':
             return{

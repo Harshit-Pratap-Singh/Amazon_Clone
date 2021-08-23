@@ -5,10 +5,12 @@ import { useStateValue } from './StateProvider'
 function Product(props) {
     const [{ basket },dispatch]=useStateValue();
     const addToCart=() =>{
+        const id=Date.now();
         dispatch({
             type: "ADD_TO_BASKET",
             item: {
-                id:props.id,
+                key: id,
+                id:id,
                 title:props.title,
                 price:props.price,
                 img:props.img,
