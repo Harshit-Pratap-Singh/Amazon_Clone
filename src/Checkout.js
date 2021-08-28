@@ -4,7 +4,6 @@ import CheckoutProduct from './CheckoutProduct';
 import { useStateValue } from './StateProvider';
 import Subtotal from './Subtotal.js';
 import FlipMove from "react-flip-move";
-import keygen from 'keygenerator';
 
 function Checkout() {
     const [{basket,user}]=useStateValue();
@@ -30,7 +29,7 @@ function Checkout() {
           alt='ad'
             />
             <div >
-                <h3>Hello, {user?.email}</h3>
+                <h3>Hello, {user ? user.email : 'Guest'}</h3>
                 <h1 className='checkout__title'>
                     Your Shopping Basket
                 </h1>
