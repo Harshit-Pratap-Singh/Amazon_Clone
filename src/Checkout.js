@@ -34,12 +34,12 @@ function Checkout() {
                     Your Shopping Basket
                 </h1>
             </div>
-            <div >
+            <div style={{ overflowAnchor: 'none' }}>
                 <FlipMove  
                 easing='ease-in-out'
                 staggerDurationBy="0"
                 enterAnimation='none'
-                leaveAnimation='accordionVertical'
+                leaveAnimation='accordionHorizontal'
             duration={300}
            >
              {allItems}  

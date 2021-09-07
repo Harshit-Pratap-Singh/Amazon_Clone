@@ -14,7 +14,7 @@ const CheckoutProduct=forwardRef(({id,price,img,rating,title,hideButton},ref) =>
     };
     return (
        
-        <div ref={ref} className='checkoutProduct'>
+        <div ref={ref} className='checkoutProduct' >
             <img className='checkoutProduct__image' src={img} alt=''/>
         <div className='checkoutProduct__info'>
         <p className='checkoutProduct__title'>
