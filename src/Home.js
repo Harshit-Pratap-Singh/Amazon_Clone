@@ -5,13 +5,60 @@ import { items } from './resource/items';
 
 function Home() {
   return (
-    <div className='home'>
-      <div className='home__container'>
-        <img
-          className='home__image'
-          src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
-          alt='asa'
-        />
+    <>
+    {/* // <div className='home'> */}
+    {/* //   <div className='home__container'> */}
+    {/* //     <img */}
+    {/* //       className='home__image'
+    //       src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
+    //       alt='asa'
+    //     /> */}
+
+
+
+
+<div id="carouselExampleControls" className="carousel slide home" data-bs-ride="carousel">
+  <div className="carousel-inner home__container">
+    <div className="carousel-item active home__image">
+      <img src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" className="d-block w-100 home__image" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src="https://m.media-amazon.com/images/I/71M5RL8EgML._SX3000_.jpg" className="d-block w-100" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src="https://m.media-amazon.com/images/I/71A8S3g4PiL._SX3000_.jpg" className="d-block w-100" alt="..."/>
+    </div>
+
+
+
+    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Previous</span>
+  </button>
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="visually-hidden">Next</span>
+  </button>
+
+
+
+    <div className="home__row">
+         {items.map((item)=> <Product 
+         key={item.id}
+           id={item.id}
+          img={item.image}
+          title={item.title}
+          price={parseInt(item.price*75)}
+          rating={parseInt(item.rating)}
+         />)}
+        </div>
+      </div>
+
+
+  </div>
+  
+  
+{/* </div> */}
         {/* <div className='home__row'>
          
           <Product
@@ -69,19 +116,10 @@ function Home() {
         </div> */}
 
 
-        <div className="home__row">
-         {items.map((item)=> <Product 
-         key={item.id}
-           id={item.id}
-          img={item.image}
-          title={item.title}
-          price={parseInt(item.price*75)}
-          rating={parseInt(item.rating)}
-         />)}
-        </div>
-      </div>
-    </div>
+        
+  
+    </>
   )
 }
 
-export default Home
+ export default Home 
