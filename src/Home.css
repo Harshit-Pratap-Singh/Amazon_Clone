@@ -10,8 +10,6 @@
     display:flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    
-    gap: 0 0px;
     width: 100%;
     z-index: 1;
 }
@@ -22,3 +20,8 @@
     mask-image: linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0));
 }
 
+@media only screen and (max-width: 768px) {
+.home__image{
+    object-fit: cover;
+}
+}

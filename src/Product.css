@@ -9,6 +9,7 @@
     max-height: 400px;
     background-color: white;
     z-index: 1;
+    border-radius: 10px;
 }
 
 .product >img{
@@ -42,6 +43,8 @@
 @media only screen and (max-width: 768px) {
     .product{
         width: 100%;
+        /* border: 2px solid white; */
+        
     }
     .product>button{
         font-size: 1rem;
