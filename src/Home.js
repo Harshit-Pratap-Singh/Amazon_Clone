@@ -12,13 +12,7 @@ function Home() {
           alt='asa'
         />
         <div className='home__row'>
-          <Product
-            id='1'
-            title='the code book'
-            img='https://images-eu.ssl-images-amazon.com/images/I/51CC3yLf5mL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg'
-            price={450}
-            rating={5}
-          />
+         
           <Product
             id='2'
 
@@ -30,6 +24,13 @@ function Home() {
 
         </div>
         <div className='home__row'>
+        <Product
+            id='1'
+            title='the code book'
+            img='https://images-eu.ssl-images-amazon.com/images/I/51CC3yLf5mL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg'
+            price={450}
+            rating={5}
+          />
           <Product
             id='3'
 
