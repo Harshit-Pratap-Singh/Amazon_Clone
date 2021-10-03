@@ -5,11 +5,18 @@ import { useStateValue } from './StateProvider';
 import { useHistory } from 'react-router-dom';
 
 function Subtotal() {
-    const [{basket}]=useStateValue();
+    const [{basket,user}]=useStateValue();
     const history=useHistory();
     var total=0;
     basket.forEach(({price}) => total+=price);
-    
+    const handleClick=() =>{
+        // if(user) history.push('/payment');
+        // else {
+        //     alert("Please login to proceed");
+        //     history.push('/login');
+        // }
+        history.push('/payment');
+    }
     return (
         <div className='subtotal'>
             <CurrencyFormat 
@@ -29,7 +36,7 @@ function Subtotal() {
                 thousandSeparator={true}
                 prefix={'₹'}
             />
-            <button onClick={e => history.push('/payment')}>Proceed to Checkout</button>
+            <button onClick={handleClick}>Proceed to Checkout</button>
         </div>
     );
 }

@@ -71,6 +71,7 @@ function Home() {
 
         <div className="home__row">
          {items.map((item)=> <Product 
+         key={item.id}
            id={item.id}
           img={item.image}
           title={item.title}
