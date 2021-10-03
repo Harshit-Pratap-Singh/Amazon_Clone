@@ -14,3 +14,16 @@
     padding: 10px;
     border-bottom : 1px solid lightgray;
 }
+
+@media only screen and (max-width: 768px) {
+   .checkout{
+       flex-direction: column-reverse;
+       align-content: center;
+   }
+   .checkout__right{
+    padding: 10px;
+}
+.checkout__title{
+    font-size: 1.8rem;
+}
+}
