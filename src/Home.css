@@ -8,6 +8,10 @@
 
 .home__row{
     display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    gap: 0 0px;
     width: 100%;
     z-index: 1;
 }
