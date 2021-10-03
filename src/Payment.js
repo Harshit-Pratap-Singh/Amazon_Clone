@@ -121,7 +121,7 @@ function Payment() {
                 </div>
                 <div className="payment__detail">
                     <form onSubmit={handleSubmit}>
-                        <CardElement onChange={handleChange}/>
+                        <CardElement onChange={handleChange} className='payment__cardInput'/>
                         <div className="payment__priceContainer">
                         <CurrencyFormat 
                             renderText={(value) =>

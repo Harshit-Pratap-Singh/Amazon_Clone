@@ -1,5 +1,5 @@
 .header {
-    height :  60px;
+    height :  3.75rem;
     display: flex;
     align-items: center;
     background-color: #131921;
@@ -69,4 +69,20 @@ background-color: #cd9042;
 }
 .header_basketCount{
     margin: auto 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .header{
+flex-wrap: wrap ;
+height: auto;
+justify-content: space-around;
+}
+.header_search{
+    margin-right: 10px;
+}
+.header_nav{
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 10px;
+}
 }

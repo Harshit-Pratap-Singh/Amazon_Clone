@@ -22,13 +22,13 @@ function Product(props) {
     return (
         <div className='product'>
             <div className='product__info'>
-                <p>{props.title}</p>
+                <p>{props.title.length>80?props.title.slice(0,80)+'...':props.title}</p>
                 <p className='product__price'>
                     <small>₹</small>
                     <strong>{props.price}</strong>
                 </p>
                 <div className='product__rating'>
-                    {Array(props.rating).fill().map((val,index) => {return <p key={index}>⭐</p>})}                    
+                    {Array(parseInt(props.rating)).fill().map((val,index) => {return <p key={index}>⭐</p>})}                    
                 </div>
             </div>
                     <img 

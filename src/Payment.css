@@ -38,7 +38,29 @@
     color: black;
     border-radius: 2px;
     width: 20%;
-    height: 30px;
+    height: auto;
     font-weight: bold;
     font-size: medium;
+}
+.payment__cardInput{
+    margin-bottom :15px;
+}
+@media only screen and (max-width: 768px){
+    .payment__section{
+        flex-direction: column;
+        
+    }
+    .payment__address , .payment__items , .payment__detail{
+        flex: 1;
+    }
+    .payment__title{
+        flex :1;
+        margin-bottom: 30px;
+        font-size: 1.2rem;
+    }
+    
+    .payment__buyNow{
+        width: 50%;
+        font-size: 1.2rem;
+    }
 }

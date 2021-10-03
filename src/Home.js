@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.css';
 import Product from './Product.js';
+import { items } from './resource/items';
 
 function Home() {
   return (
@@ -11,25 +12,26 @@ function Home() {
           src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
           alt='asa'
         />
-        <div className='home__row'>
-          <Product
-            id='1'
-            title='the code book'
-            img='https://images-eu.ssl-images-amazon.com/images/I/51CC3yLf5mL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg'
-            price={450}
-            rating={5}
-          />
+        {/* <div className='home__row'>
+         
           <Product
             id='2'
 
             title='SAMSUNG Galaxy A31 (Prism Crush White, 128 GB)  (6 GB RAM)'
             img='https://rukminim1.flixcart.com/image/416/416/kamtsi80/mobile/4/a/6/samsung-galaxy-a31-sm-a315fzwwins-original-imafs5p5y3gf4cej.jpeg?q=70'
             price={23999}
-            rating={4}
+            rating={4.5}
           />
 
         </div>
         <div className='home__row'>
+        <Product
+            id='1'
+            title='the code book'
+            img='https://images-eu.ssl-images-amazon.com/images/I/51CC3yLf5mL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg'
+            price={450}
+            rating={5}
+          />
           <Product
             id='3'
 
@@ -64,6 +66,18 @@ function Home() {
             price={30999}
             rating={4}
           />
+        </div> */}
+
+
+        <div className="home__row">
+         {items.map((item)=> <Product 
+         key={item.id}
+           id={item.id}
+          img={item.image}
+          title={item.title}
+          price={parseInt(item.price*75)}
+          rating={parseInt(item.rating)}
+         />)}
         </div>
       </div>
     </div>

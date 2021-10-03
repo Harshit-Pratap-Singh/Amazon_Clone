@@ -8,12 +8,17 @@
 
 .home__row{
     display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+    gap: 0 0px;
     width: 100%;
     z-index: 1;
 }
 .home__image {
     width: 100%;
     z-index: -1;
-    margin-bottom: -250px;
+    margin-bottom: -18%;
     mask-image: linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0));
 }
+
