@@ -7,11 +7,27 @@ function Home() {
   return (
     <div className='home'>
       <div className='home__container'>
-        <img
-          className='home__image'
-          src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
-          alt='asa'
-        />
+        <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <img src="..." className="d-block w-100" alt="..."/>
+            </div>
+            <div className="carousel-item">
+              <img src="..." className="d-block w-100" alt="..."/>
+            </div>
+            <div className="carousel-item">
+              <img src="..." className="d-block w-100" alt="..."/>
+            </div>
+          </div>
+          <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
         {/* <div className='home__row'>
          
           <Product
@@ -70,14 +86,14 @@ function Home() {
 
 
         <div className="home__row">
-         {items.map((item)=> <Product 
-         key={item.id}
-           id={item.id}
-          img={item.image}
-          title={item.title}
-          price={parseInt(item.price*75)}
-          rating={parseInt(item.rating)}
-         />)}
+          {items.map((item) => <Product
+            key={item.id}
+            id={item.id}
+            img={item.image}
+            title={item.title}
+            price={parseInt(item.price * 75)}
+            rating={parseInt(item.rating)}
+          />)}
         </div>
       </div>
     </div>
