@@ -56,6 +56,29 @@ function Home() {
 
 
   </div>
+
+  {/* <div id="carouselExampleControls" className="carousel slide home" data-bs-ride="carousel">
+  <div className="carousel-inner home__container">
+    <div className="carousel-item active home__image">
+      <img src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg" className="d-block w-100" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src="https://m.media-amazon.com/images/I/71M5RL8EgML._SX3000_.jpg" className="d-block w-100" alt="..."/>
+    </div>
+    <div className="carousel-item">
+      <img src="https://m.media-amazon.com/images/I/71A8S3g4PiL._SX3000_.jpg" className="d-block w-100" alt="..."/>
+    </div>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> */}
   
   
 {/* </div> */}
