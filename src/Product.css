@@ -1,53 +1,46 @@
-.product{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    margin: 10px;
-    padding: 20px;
-    width: 28%;
-    max-height: 400px;
-    background-color: white;
-    z-index: 1;
-    border-radius: 10px;
+import React from 'react';
+import './Product.css';
+import { useStateValue } from './StateProvider';
+
+function Product(props) {
+  const [{ basket }, dispatch] = useStateValue();
+  const addToCart = () => {
+    const id = Date.now();
+    dispatch({
+      type: 'ADD_TO_BASKET',
+      item: {
+        key: id,
+        id: id,
+        title: props.title,
+        price: props.price,
+        img: props.img,
+        rating: props.rating
+      }
+    });
+  };
+  return (
+    <div className='product'>
+      <div className='product__info'>
+        <p>
+          {props.title.length > 80
+            ? props.title.slice(0, 80) + '...'
+            : props.title}
+        </p>
+      </div>
+      <img src={props.img} alt='' />
+      <p className='product__price'>₹{props.price}</p>
+      <div className='product__rating'>
+        {Array(parseInt(props.rating))
+          .fill()
+          .map((val, index) => {
+            return <p key={index}>⭐</p>;
+          })}
+      </div>
+      <button onClick={addToCart} className='addToCartButton'>
+        Add To Cart
+      </button>
+    </div>
+  );
 }
 
-.product >img{
-    max-height: 200px;
-    width: 100%;
-    object-fit: contain;
-    margin-bottom: 15px;
-}
-
-.product > button {
-    background: #f0c14b;
-    border :1px solid;
-    margin-top: 10px;
-    border-color: #a88734 #9c7e31 #846a29 ;
-    color: black;
-}
-
-.product__price {
-    margin-top: 5px;
-}
-
-.product__rating {
-    display: flex;
-}
-
-.product__info {
-    height: 100px;
-    margin-bottom: 15px;
-}
-
-@media only screen and (max-width: 768px) {
-    .product{
-        width: 100%;
-        /* border: 2px solid white; */
-        
-    }
-    .product>button{
-        font-size: 1rem;
-        padding: 0.3rem 2rem;
-    }
-}
+export default Product;
